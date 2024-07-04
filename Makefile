@@ -1,4 +1,4 @@
-dotfiles = nvim wezterm
+dotfiles = nvim wezterm zshrc
 
 
 run: $(dotfiles)
