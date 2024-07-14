@@ -1,5 +1,5 @@
-if ! command -v git 2>&1 /dev/null
+if ! command -v git > /dev/null 2>&1
 then
-    exit 1
+    return
 fi
 git config --global core.editor nvim

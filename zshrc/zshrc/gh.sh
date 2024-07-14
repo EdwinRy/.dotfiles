@@ -1,6 +1,6 @@
 
-if ! command -v gh 2>&1 /dev/null
+if ! command -v gh > /dev/null 2>&1
 then
-    exit 1
+    return
 fi
 gh config set editor "nvim"
