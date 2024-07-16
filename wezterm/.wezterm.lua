@@ -15,6 +15,9 @@ config.color_scheme = "Catppuccin Mocha"
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 
+-- config.window_background_opacity = 0.9
+-- config.macos_window_background_blur = 50
+
 config.adjust_window_size_when_changing_font_size = false
 
 -- config.freetype_load_flags = 'NO_HINTING'
@@ -84,6 +87,34 @@ config.keys = {
     {
         key = 'k',
         mods = 'LEADER',
+        action = wezterm.action {
+            ActivatePaneDirection = "Up"
+        }
+    },
+    {
+        key = 'h',
+        mods = 'CMD',
+        action = wezterm.action {
+            ActivatePaneDirection = "Left"
+        }
+    },
+    {
+        key = 'l',
+        mods = 'CMD',
+        action = wezterm.action {
+            ActivatePaneDirection = "Right"
+        }
+    },
+    {
+        key = 'j',
+        mods = 'CMD',
+        action = wezterm.action {
+            ActivatePaneDirection = "Down"
+        }
+    },
+    {
+        key = 'k',
+        mods = 'CMD',
         action = wezterm.action {
             ActivatePaneDirection = "Up"
         }
@@ -201,6 +232,16 @@ config.keys = {
         key = 'K',
         mods = 'CTRL|SHIFT',
         action = wezterm.action.ClearScrollback 'ScrollbackAndViewport',
+    },
+    {
+        key = 'r',
+        mods = 'LEADER',
+        action = wezterm.action.RotatePanes 'Clockwise'
+    },
+    {
+        key = 'R',
+        mods = 'LEADER',
+        action = wezterm.action.RotatePanes 'CounterClockwise'
     },
 }
 
