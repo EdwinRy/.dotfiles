@@ -70,25 +70,25 @@ end
 
 local function paneNavigationKeys()
     local keyConfig = {
-        { key = 'h', direction = 'Left', mod = 'LEADER' },
-        { key = 'j', direction = 'Down', mod = 'LEADER'},
-        { key = 'k', direction = 'Up', mod = 'LEADER'},
-        { key = 'l', direction = 'Right', mod = 'LEADER'},
+        { key = 'h',          direction = 'Left',  mod = 'LEADER' },
+        { key = 'j',          direction = 'Down',  mod = 'LEADER' },
+        { key = 'k',          direction = 'Up',    mod = 'LEADER' },
+        { key = 'l',          direction = 'Right', mod = 'LEADER' },
 
-        { key = 'h', direction = 'Left', mod = 'CMD' },
-        { key = 'j', direction = 'Down', mod = 'CMD'},
-        { key = 'k', direction = 'Up', mod = 'CMD'},
-        { key = 'l', direction = 'Right', mod = 'CMD'},
+        { key = 'h',          direction = 'Left',  mod = 'CMD' },
+        { key = 'j',          direction = 'Down',  mod = 'CMD' },
+        { key = 'k',          direction = 'Up',    mod = 'CMD' },
+        { key = 'l',          direction = 'Right', mod = 'CMD' },
 
-        { key = 'LeftArrow', direction = 'Left', mod = 'LEADER' },
-        { key = 'DownArrow', direction = 'Down', mod = 'LEADER'},
-        { key = 'UpArrow', direction = 'Up', mod = 'LEADER'},
-        { key = 'RightArrow', direction = 'Right', mod = 'LEADER'},
+        { key = 'LeftArrow',  direction = 'Left',  mod = 'LEADER' },
+        { key = 'DownArrow',  direction = 'Down',  mod = 'LEADER' },
+        { key = 'UpArrow',    direction = 'Up',    mod = 'LEADER' },
+        { key = 'RightArrow', direction = 'Right', mod = 'LEADER' },
 
-        { key = 'LeftArrow', direction = 'Left', mod = 'CMD' },
-        { key = 'DownArrow', direction = 'Down', mod = 'CMD'},
-        { key = 'UpArrow', direction = 'Up', mod = 'CMD'},
-        { key = 'RightArrow', direction = 'Right', mod = 'CMD'},
+        { key = 'LeftArrow',  direction = 'Left',  mod = 'CMD' },
+        { key = 'DownArrow',  direction = 'Down',  mod = 'CMD' },
+        { key = 'UpArrow',    direction = 'Up',    mod = 'CMD' },
+        { key = 'RightArrow', direction = 'Right', mod = 'CMD' },
     }
 
     local keys = {}
@@ -149,27 +149,27 @@ end
 
 local function paneResizeKeys()
     local keyConfig = {
-        { key = 'h', direction = 'Left', mod = 'CMD|META', resizeFactor = resizeFactor },
-        { key = 'j', direction = 'Down', mod = 'CMD|META', resizeFactor = resizeFactor },
-        { key = 'k', direction = 'Up', mod = 'CMD|META', resizeFactor = resizeFactor },
-        { key = 'l', direction = 'Right', mod = 'CMD|META', resizeFactor = resizeFactor },
+        { key = 'h',          direction = 'Left',  mod = 'CMD|META',       resizeFactor = resizeFactor },
+        { key = 'j',          direction = 'Down',  mod = 'CMD|META',       resizeFactor = resizeFactor },
+        { key = 'k',          direction = 'Up',    mod = 'CMD|META',       resizeFactor = resizeFactor },
+        { key = 'l',          direction = 'Right', mod = 'CMD|META',       resizeFactor = resizeFactor },
 
-        { key = 'h', direction = 'Left', mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
-        { key = 'j', direction = 'Down', mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
-        { key = 'k', direction = 'Up', mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
-        { key = 'l', direction = 'Right', mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
+        { key = 'h',          direction = 'Left',  mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
+        { key = 'j',          direction = 'Down',  mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
+        { key = 'k',          direction = 'Up',    mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
+        { key = 'l',          direction = 'Right', mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
 
-        { key = 'LeftArrow', direction = 'Left', mod = 'CMD|META', resizeFactor = resizeFactor },
-        { key = 'DownArrow', direction = 'Down', mod = 'CMD|META', resizeFactor = resizeFactor },
-        { key = 'UpArrow', direction = 'Up', mod = 'CMD|META', resizeFactor = resizeFactor },
-        { key = 'RightArrow', direction = 'Right', mod = 'CMD|META', resizeFactor = resizeFactor },
+        { key = 'LeftArrow',  direction = 'Left',  mod = 'CMD|META',       resizeFactor = resizeFactor },
+        { key = 'DownArrow',  direction = 'Down',  mod = 'CMD|META',       resizeFactor = resizeFactor },
+        { key = 'UpArrow',    direction = 'Up',    mod = 'CMD|META',       resizeFactor = resizeFactor },
+        { key = 'RightArrow', direction = 'Right', mod = 'CMD|META',       resizeFactor = resizeFactor },
 
-        { key = 'LeftArrow', direction = 'Left', mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
-        { key = 'DownArrow', direction = 'Down', mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
-        { key = 'UpArrow', direction = 'Up', mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
+        { key = 'LeftArrow',  direction = 'Left',  mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
+        { key = 'DownArrow',  direction = 'Down',  mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
+        { key = 'UpArrow',    direction = 'Up',    mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
         { key = 'RightArrow', direction = 'Right', mod = 'CMD|META|SHIFT', resizeFactor = bigResizeFactor },
     }
-    
+
     local keys = {}
 
     for _, c in pairs(keyConfig) do
@@ -218,6 +218,26 @@ config.keys = {
         key = 'R',
         mods = 'LEADER',
         action = wezterm.action.RotatePanes 'CounterClockwise'
+    },
+    {
+        key = '!',
+        mods = 'LEADER',
+        action = wezterm.action_callback(function(_, pane)
+            pane:move_to_new_tab()
+            pane:activate()
+        end),
+    },
+    {
+        key = 'p',
+        mods = 'LEADER',
+        action = wezterm.action.PaneSelect {
+            mode = 'SwapWithActiveKeepFocus'
+        }
+    },
+    {
+        key = 'P',
+        mods = 'CTRL',
+        action = wezterm.action.ActivateCommandPalette,
     },
 }
 
