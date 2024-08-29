@@ -1,16 +1,16 @@
 local wezterm = require 'wezterm'
 local config = {}
 
--- function scheme_for_appearance(appearance)
---     if appearance:find "Dark" then
---         return "Catppuccin Mocha"
---     else
---         return "Catppuccin Latte"
---     end
--- end
+function scheme_for_appearance(appearance)
+    if appearance:find "Dark" then
+        return "Catppuccin Mocha"
+    else
+        return "Catppuccin Latte"
+    end
+end
 
--- config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+-- config.color_scheme = "Catppuccin Mocha"
 
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
@@ -64,16 +64,23 @@ local function splitKeys()
                 SplitVertical = { domain = "CurrentPaneDomain" }
             }
         },
+        {
+            key = 'h',
+            mods = 'LEADER',
+            action = wezterm.action {
+                SplitVertical = { domain = "CurrentPaneDomain" }
+            }
+        },
     }
     return keys
 end
 
 local function paneNavigationKeys()
     local keyConfig = {
-        { key = 'h',          direction = 'Left',  mod = 'LEADER' },
-        { key = 'j',          direction = 'Down',  mod = 'LEADER' },
-        { key = 'k',          direction = 'Up',    mod = 'LEADER' },
-        { key = 'l',          direction = 'Right', mod = 'LEADER' },
+        -- { key = 'h',          direction = 'Left',  mod = 'LEADER' },
+        -- { key = 'j',          direction = 'Down',  mod = 'LEADER' },
+        -- { key = 'k',          direction = 'Up',    mod = 'LEADER' },
+        -- { key = 'l',          direction = 'Right', mod = 'LEADER' },
 
         { key = 'h',          direction = 'Left',  mod = 'CMD' },
         { key = 'j',          direction = 'Down',  mod = 'CMD' },
@@ -146,6 +153,21 @@ local function tabNavigationKeys()
     }
 end
 
+local function windowNavigationKeys()
+    return {
+        {
+            key = '[',
+            mods = "CMD|SHIFT",
+            action = wezterm.action.ActivateWindowRelative(1)
+        },
+        {
+            key = ']',
+            mods = "CMD|SHIFT",
+            action = wezterm.action.ActivateWindowRelative(-1)
+        },
+    }
+end
+
 
 local function paneResizeKeys()
     local keyConfig = {
@@ -184,7 +206,6 @@ local function paneResizeKeys()
 
     return keys
 end
-
 
 config.keys = {
     {
@@ -239,12 +260,32 @@ config.keys = {
         mods = 'CTRL',
         action = wezterm.action.ActivateCommandPalette,
     },
+    { key = 'u', mods = 'CMD',       action = wezterm.action.ScrollByPage(-0.5) },
+    { key = 'd', mods = 'CMD',       action = wezterm.action.ScrollByPage(0.5) },
+    { key = 'u', mods = 'CMD|SHIFT', action = wezterm.action.ScrollByPage(-1) },
+    { key = 'd', mods = 'CMD|SHIFT', action = wezterm.action.ScrollByPage(1) },
+    {
+        key = 'E',
+        mods = 'CMD|SHIFT',
+        action = wezterm.action.PromptInputLine {
+            description = 'Enter new name for tab',
+            action = wezterm.action_callback(function(window, pane, line)
+                -- line will be `nil` if they hit escape without entering anything
+                -- An empty string if they just hit enter
+                -- Or the actual line of text they wrote
+                if line then
+                    window:active_tab():set_title(line)
+                end
+            end),
+        },
+    },
 }
 
 local extraKeys = {
     splitKeys(),
     paneNavigationKeys(),
     tabNavigationKeys(),
+    windowNavigationKeys(),
     paneResizeKeys(),
 }
 
