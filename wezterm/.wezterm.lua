@@ -9,6 +9,8 @@ function scheme_for_appearance(appearance)
     end
 end
 
+config.enable_kitty_graphics=true
+
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 -- config.color_scheme = "Catppuccin Mocha"
 
