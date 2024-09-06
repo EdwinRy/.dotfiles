@@ -251,6 +251,14 @@ config.keys = {
         end),
     },
     {
+        key = '@',
+        mods = 'LEADER',
+        action = wezterm.action_callback(function(_, pane)
+            pane:move_to_new_window()
+            pane:activate()
+        end),
+    },
+    {
         key = 'p',
         mods = 'LEADER',
         action = wezterm.action.PaneSelect {
