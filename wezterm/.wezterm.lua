@@ -27,6 +27,7 @@ config.adjust_window_size_when_changing_font_size = false
 -- config.font_antialias = 'Greyscale'
 
 config.font = wezterm.font_with_fallback({
+	{ family = "JetBrainsMono Nerd Font", weight = "Medium" },
 	{ family = "JetBrains Mono", weight = "Medium" },
 	"Fira Code",
 	"Hack Nerd Mono",
