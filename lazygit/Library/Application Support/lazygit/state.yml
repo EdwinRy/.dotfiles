@@ -1,6 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/edwinrybarczyk/.dotfiles
+    - /Users/edwinrybarczyk/.dotfiles/nvim/.config/nvim
     - /Users/edwinrybarczyk/liberis/create-api
     - /Users/edwinrybarczyk/liberis/Liberis.Merchant.Api
 startuppopupversion: 5
