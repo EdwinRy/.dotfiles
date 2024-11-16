@@ -1,4 +1,4 @@
-dotfiles = nvim wezterm zshrc
+dotfiles = nvim wezterm zshrc lazygit
 
 
 run: $(dotfiles)
