@@ -1,12 +1,14 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/edwinrybarczyk/.dotfiles
-    - /Users/edwinrybarczyk/.dotfiles/nvim/.config/nvim
+    - /Users/edwinrybarczyk/.config/nvim
     - /Users/edwinrybarczyk/liberis/create-api
+    - /Users/edwinrybarczyk/.dotfiles/nvim/.config/nvim
     - /Users/edwinrybarczyk/liberis/Liberis.Merchant.Api
 startuppopupversion: 5
 lastversion: 0.44.1
-customcommandshistory: []
+customcommandshistory:
+    - git commit --no-verify
 hidecommandlog: false
 ignorewhitespaceindiffview: false
 diffcontextsize: 3
