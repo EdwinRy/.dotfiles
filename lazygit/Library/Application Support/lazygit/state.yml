@@ -1,10 +1,6 @@
 lastupdatecheck: 0
 recentrepos:
-    - /Users/edwinrybarczyk/.dotfiles
-    - /Users/edwinrybarczyk/.config/nvim
-    - /Users/edwinrybarczyk/liberis/create-api
-    - /Users/edwinrybarczyk/.dotfiles/nvim/.config/nvim
-    - /Users/edwinrybarczyk/liberis/Liberis.Merchant.Api
+    - /Users/edwin/.dotfiles
 startuppopupversion: 5
 lastversion: 0.44.1
 customcommandshistory:

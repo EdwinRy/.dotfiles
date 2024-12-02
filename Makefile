@@ -1,4 +1,4 @@
-dotfiles = nvim wezterm zshrc lazygit
+dotfiles = nvim wezterm zshrc lazygit tmux
 
 
 run: $(dotfiles)
