@@ -1,6 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/edwin/.dotfiles
+    - /Users/edwin/.dotfiles/nvim/.config/nvim
+    - /Users/edwin/personal/advent_2024
 startuppopupversion: 5
 lastversion: 0.44.1
 customcommandshistory:
